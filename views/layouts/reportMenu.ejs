@@ -1,0 +1,86 @@
+<section
+  id="report-reasons-section"
+  class="z-30 h-screen w-full bg-transparent fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] hidden items-center justify-center backdrop-brightness-50 dark:backdrop-brightness-50"
+>
+  <form
+    class="bg-slate-50 flex flex-col gap-3 px-6 py-4 rounded-sm w-[97%] dark:bg-gray-900"
+    id="reportForm"
+  >
+    <div class="mb-6">
+      <h2 class="font-bold text-gray-600 text-lg dark:text-gray-400">
+        Don't wait. Report something that doesn't look right.
+      </h2>
+      <p class="text-gray-500 text-sm dark:text-gray-500">
+        Choose the appropriate reason and report it to us. We won't let the
+        respected user know who has reported.
+      </p>
+    </div>
+    <div class="check-box flex items-start gap-2">
+      <input
+        type="checkbox"
+        name="reason"
+        value="It violates the website or platform's terms of service or community guidelines."
+      />
+      <p class="text-gray-700 dark:text-gray-300">
+        It violates the website or platform's terms of service or community
+        guidelines.
+      </p>
+    </div>
+    <div class="check-box flex items-start gap-2">
+      <input
+        type="checkbox"
+        name="reason"
+        value="It contains personal or sensitive information, such as someone's full name, address, phone number, or email."
+      />
+      <p class="text-gray-700 dark:text-gray-300">
+        It contains personal or sensitive information, such as someone's full
+        name, address, phone number, or email.
+      </p>
+    </div>
+    <div class="check-box flex items-start gap-2">
+      <input
+        type="checkbox"
+        name="reason"
+        value="It is hate speech, bullying or harassment."
+      />
+      <p class="text-gray-700 dark:text-gray-300">
+        It is hate speech, bullying or harassment.
+      </p>
+    </div>
+    <div class="check-box flex items-start gap-2">
+      <input type="checkbox" name="reason" value="It is sexually explicit." />
+      <p class="text-gray-700 dark:text-gray-300">It is sexually explicit.</p>
+    </div>
+    <div class="check-box flex items-start gap-2">
+      <input
+        type="checkbox"
+        name="reason"
+        value="It is spam or promoting scams."
+      />
+      <p class="text-gray-700 dark:text-gray-300">
+        It is spam or promoting scams.
+      </p>
+    </div>
+    <div class="check-box flex items-start gap-2">
+      <input
+        type="checkbox"
+        name="reason"
+        value="It is promoting illegal activities."
+      />
+      <p class="text-gray-700 dark:text-gray-300">
+        It is promoting illegal activities.
+      </p>
+    </div>
+    <input
+      type="submit"
+      value="Report"
+      class="bg-red-500 text-white text-lg mt-6 py-1 rounded-md dark:bg-red-800"
+    />
+    <input
+      type="button"
+      value="Cancel"
+      class="bg-blue-500 text-white text-lg py-1 rounded-md dark:bg-blue-800"
+      id="caneclBtn"
+    />
+  </form>
+</section>

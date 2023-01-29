@@ -1,0 +1,59 @@
+<%- include("layouts/head") %>
+<body>
+    <%- include("layouts/navbar") %> 
+    <%- include("layouts/menu") %> 
+    <%- include('layouts/alert_success') %> 
+    <section class="h-screen profileSection w-full dark:bg-gray-900">
+        <section class="profileContainer">
+            <div class="font-medium text-lg text-white p-2">Hi, <%= user.firstname %> </div>
+            <div class="absolute top-40 left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center justify-center flex-col">
+                <div class="relative">
+                    <img src="<%= user.avatar %> " alt="profile pic" class="h-32 rounded-full">
+                    <a href="/avatars" class="absolute bottom-1 right-1 bg-emerald-900 h-10 w-10 flex items-center justify-center rounded-full flex-col">
+                        <ion-icon name="camera-outline" class="text-white text-2xl"></ion-icon>
+                    </a>
+                </div>
+                <a href="/confessions" class="font-sans w-full mt-4">
+                    <div class="flex items-center justify-center bg-green-500 px-3 py-1 rounded-sm border-[1px] border-white">
+                        <span class="font-medium text-base text-white">Your Confessions</span>
+                        <ion-icon name="caret-forward-outline" class="text-white text-lg"></ion-icon>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <div class="fixed w-[97%] bottom-1 left-[50%] translate-x-[-50%] bg-slate-50 dark:bg-gray-800 flex justify-center rounded-lg flex-col items-center py-4 pb-14  backdrop:blur-xl shadow-lg">
+            <form action="/update/name" method="post" class="w-[90%] flex flex-col gap-4 items-center ">
+                <div class="w-full flex flex-col gap-1">
+                    <label for="firstname" class="text-sm text-gray-500 flex items-center font-sans dark:text-gray-400">First name</label>
+                    <input type="text" name="firstname" value="<%= user.firstname %>" placeholder="your first name here" class="bg-slate-100  flex-1 text-base text-gray-600 font-normal p-2 rounded focus:border-b-2 focus:border-blue-300 focus:transition 0.5s dark:bg-gray-700 dark:text-gray-200">
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <label for="lasttname" class="text-sm text-gray-500 flex items-center font-sans dark:text-gray-400">Last name</label>
+                    <input type="text" name="lastname" value="<%= user.lastname %>" placeholder="your last name here" class="bg-slate-100  flex-1 text-base text-gray-600 font-normal p-2 rounded focus:border-b-2 focus:border-blue-300 focus:transition 0.5s dark:bg-gray-700 dark:text-gray-200">
+                </div>
+                <input type="submit" value="Update name" class="w-max rounded-md  uppercase text-green-600 font-sans py-1 px-4 font-medium text-base dark:text-blue-500">
+            </form>
+            <div class="w-[90%] mt-4 gap-3 flex items-center flex-col">
+                <div class="flex w-full flex-col gap-1">
+                    <label for="email" class="text-sm text-gray-600 flex items-center font-sans dark:text-gray-400">Email</label>
+                    <div class="flex-1 bg-slate-100 rounded-md p-2 flex items-center justify-between dark:bg-gray-700 dark:text-gray-200">
+                        <span class="w-full text-base text-gray-600 font-normal font-sans dark:text-gray-200"><%= user.email%></span>
+                        <a href="/update/email" class="text- font-semibold text-blue-700 dark:text-blue-500">Change</a>
+                    </div>
+                </div>
+                <div class="flex w-full flex-col gap-1">
+                    <label for="email" class="text-sm text-gray-500 flex items-center font-sans dark:text-gray-400">Joined On</label>
+                    <span class="w-full flex-1 relative bg-slate-100 rounded-md p-2 text-base text-gray-600 font-normal font-sans dark:bg-gray-700 dark:text-gray-200"><%= moment(user.createdAt).format('LL') %></span>
+                </div>
+                <form action="/logout" method="post" class="logoutForm w-full">
+                    <input type="submit" value="Log out" class="w-full rounded-md bg-sky-500 text-white font-sans py-2 px-5 mt-4 font-normal dark:bg-blue-800">
+                </form>
+                <form action="/delete_account" method="post" >
+                    <input type="submit" value="Deactivate Account" class="w-full rounded-full  font-sans  font-medium text-red-600">      
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('layouts/scripts') %>
+</body>
+</html>

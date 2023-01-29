@@ -1,0 +1,93 @@
+<%- include("layouts/head")  %> 
+  <body>
+    <%- include('layouts/menu') %> 
+    <section class="bg-slate-50 h-screen w-screen dark:bg-gray-800">
+      <nav class="h-14 flex px-3 py-3 justify-between items-center md:px-6 md:py-4 lg:px-8 lg:py-6">
+        <a href="/" class="font-semibold text-blue-600 text-base uppercase">
+          Confess.
+        </a>
+        <div class="flex items-center gap-1 lg:gap-3">
+          <p class="text-[10px] text-gray-400 font-normal lg:text-base">
+            Don't have an account?
+          </p>
+          <a
+            href="/signup"
+            class="uppercase text-[10px] border-[1px] border-solid border-blue-400 px-3 py-1 rounded-xl text-gray-500 lg:px-6 lg:py-2 lg:text-sm lg:rounded-3xl lg:border-2 hover:bg-blue-400 hover:text-white font-semibold cursor-pointer transition 0.5s"
+          >
+            Create now
+          </a>
+        </div>
+      </nav>
+      <div class="fromContainer flex justify-center items-center w-full">
+        <div
+          class="hidden flex-1 h-full w-full sm:flex md:flex lg:flex xl:flex 2xl:flex items-center justify-center"
+        >
+          <img
+            src="/images/Login-cuate.svg"
+            alt="Login-cuate"
+            class="h-2/3 lg:h-4/5 opacity-95 md:h-3/5"
+            draggable="false"
+          />
+        </div>
+        <div
+          class="flex-1 flex registerForm h-full items-center justify-center"
+        >
+          <form
+            action="/user/signin"
+            class="w-full px-6 flex flex-col gap-4 md:w-3/5 md:px-0 lg:w-3/5"
+            method="post"
+          >
+            <div class="w-full mb-4 sm:mb-6 lg:mb-8">
+              <p class="uppercase text-gray-400 text-sm font-medium ">
+                start for free
+              </p>
+              <h1 class="font-extrabold text-2xl text-gray-800 xl:text-4xl dark:text-gray-400">
+                Sign in to Confess.
+              </h1>
+            </div>
+            <% if (messages.error) { %>
+              <span class="text-red-500 font-normal text-center w-full bg-red-50 border-2 rounded-md border-red-300 py-1 text-xs font-sans dark:bg-transparent dark:border-red-600"><%= messages.error %> </span>
+            <% } %>
+            <div class="flex flex-col w-full">
+              <label
+                for="email"
+                class="text-sm pb-1 text-gray-600 font-medium xl:text-sm dark:text-gray-400"
+                >Email</label
+              >
+              <input
+                type="email"
+                placeholder="name@gmail.com"
+                name="email"
+                class="bg-transparent w-full h-11 pl-2 border-2 border-solid border-gray-300 rounded-md placeholder:text-sm text-base placeholder:text-gray-300 xl:h-12 dark:border-gray-600 dark:placeholder:text-gray-600 dark:text-white"
+              />
+            </div>
+            <div class="flex flex-col w-full">
+              <label
+                for="password"
+                class="text-sm pb-1 text-gray-600 font-medium xl:text-sm dark:text-gray-400"
+                >Password</label
+              >
+              <input
+                type="password"
+                placeholder="6+ Characters, 1 Captial letter"
+                name="password"
+                class="bg-transparent h-11 pl-2 border-2 border-solid border-gray-300 rounded-md placeholder:text-sm text-base placeholder:text-gray-300 xl:h-12 dark:border-gray-600 dark:placeholder:text-gray-600 dark:text-white"
+              />
+            </div>
+            <div class="h-11 w-full flex items-center justify-center">
+              <input
+                type="submit"
+                value="Login now"
+                class="w-full h-full bg-blue-700 rounded-md text-white text-sm font-medium lg:text-base cursor-pointer hover:shadow-md hover:shadow-blue-400 xl:h-12"
+              />
+            </div>
+            <div class="w-full text-center h-min md:text-right md:mt-0 md:cursor-pointer">
+              <a href="/forgot/password" class="text-sm text-blue-500 font-medium hover:underline hover:transition 0.5s" >Forgot password?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <%- include('layouts/scripts') %>
+  </body>
+</html>

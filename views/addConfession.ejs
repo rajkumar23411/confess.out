@@ -1,0 +1,89 @@
+<%- include("layouts/head")  %> 
+  <body>
+    <%- include('layouts/navbar') %> 
+    <%- include('layouts/menu') %> 
+    <section class="bg-slate-50 sm:bg-slate-200 h-screen w-screen dark:bg-gray-800">
+      <nav
+        class="h-14 flex px-3 py-3 justify-between items-center md:px-6 md:py-4 lg:px-8 lg:py-6"
+      >
+        <a href="/" class="font-semibold text-blue-600 text-base uppercase">
+          Confess.
+        </a>
+        <div class="flex items-center gap-1">
+          <p class="text-[10px] text-gray-400 font-normal lg:text-base ">
+            Share message
+          </p>
+        </div>
+      </nav>
+      <div
+        class="fromContainer flex justify-center items-center w-full h-[calc(100vh - 56px)]"
+      >
+        <div
+          class="w-full flex registerForm h-full items-center justify-center sm:w-2/3 md:w-2/4"
+        >
+          <form
+            action="/add/confession" method="post"
+            class="w-[90%] flex flex-col gap-4 md:w-3/5 lg:w-3/5 md:gap-6 lg:gap-6 sm:bg-white sm:p-5 sm:rounded-lg sm:shadow-xl shadow-red-700"
+          >
+            <div class="w-full mb-4 sm:mb-6 lg:mb-8 text-center">
+              <h1
+                class="font-extrabold text-xl sm:text-4xl md:text-3xl text-gray-800 xl:text-4xl  dark:text-gray-400"
+              >
+                Welcome to Confess.
+              </h1>
+              <p class="text-gray-400 text-xs font-normal font-sans dark:text-gray-300">
+                Write your secret message here!
+              </p>
+            </div>
+             <%- include('layouts/alert_error') %> 
+            <div class="flex flex-col w-full">
+              <label
+                for="Heading"
+                class="text-sm pb-1 text-gray-600 font-medium xl:text-sm dark:text-gray-400"
+                >Heading</label
+              >
+              <input
+                type="text"
+                name="heading"
+                placeholder="Enter Heading of your message"
+                class="bg-transparent w-full h-11 pl-2 border-2 border-solid border-gray-300 dark:border-gray-600 rounded-md placeholder:text-sm text-base placeholder:text-gray-300 xl:h-12 dark:placeholder:text-gray-600 dark:text-gray-50"
+                value="<%= messages.heading %>"
+                autocomplete="off"
+              />
+            </div>
+            <div class="flex flex-col w-full">
+              <label
+                for="repeatPassword"
+                class="text-sm pb-1 text-gray-600 font-medium xl:text-sm dark:text-gray-400"
+                >Message</label
+              >
+              <textarea
+                name="message"
+                cols="30"
+                rows="5"
+                class="resize-none bg-transparent border-2 border-solid border-gray-300 dark:border-gray-600 rounded-md pl-2 placeholder:text-sm text-base placeholder:text-gray-300 pt-1 dark:placeholder:text-gray-600 dark:text-gray-50"
+                placeholder="Write your secret message here"
+                value="<%= messages.message %>"
+              ></textarea>
+            </div>
+            <div class="h-11 w-full flex items-center justify-center">
+              <input
+                type="submit"
+                value="Publish message"
+                class="w-full h-full bg-blue-700  rounded-lg text-white text-sm font-medium lg:text-base cursor-pointer hover:shadow-md hover:shadow-blue-400 xl:h-12 transition 0.5s"
+              />
+            </div>
+            <div class="text-center text-xs text-gray-400">
+              <p>Say what you think or leave a feedback message.</p>
+              <p class="text-blue-400">
+                Don't worry! we will keep your identity hidden. Leave messages
+                anonymously.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <%- include('layouts/scripts') %> 
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<%- include("layouts/head") %>
+<body>
+  <%- include("layouts/navbar") %>
+  <%- include('layouts/menu') %> 
+  <%- include('layouts/reportMenu') %> 
+  <section class="success-alert fixed bottom-20 left-[50%] hidden translate-x-[-50%] z-50 bg-white shadow-lg shadow-gray-300 text-black text-sm px-4 py-2 font-normal rounded-md linked-copied-msg font-sans dark:bg-gray-900 dark:text-white dark:shadow-gray-900">
+    Link copied
+  </section>
+  <section
+    class="w-full confessionContainer flex items-center justify-center bg-slate-100 dark:bg-gray-800"
+  >
+    <div class="px-2 py-4 shadow shadow-gray-300 bg-white rounded-md w-[97%] dark:bg-gray-700 dark:shadow-gray-900">
+       <div class="flex items-center justify-between">
+          <span class="font-medium text-gray-600 dark:text-gray-100 flex items-start justify-center gap-2"><img src="<%= confession.user.avatar %> " alt="profile" class="h-8 rounded"> Annonymous</span>
+          <span class="text-gray-500 dark:text-gray-400 text-xs font-sans flex items-center justify-center gap-1"><ion-icon name="time-outline" class="text-base dark:text-gray-400 text-gray-500"></ion-icon> <%= moment(confession.createdAt).startOf('hour').fromNow(); %></span>
+        </div>
+      <h1 class="mt-4 font-medium dark:text-gray-300 text-lg"><%= confession.heading %></h1>
+      <p class="mt-2 text-base dark:text-gray-200"><%= confession.message %></p>
+      <div class="flex justify-between mt-4 items-center">
+        <div class="flex flex-col items-center justify-center copy-link-div leading-[1px] gap-1 ">
+            <input type="text" value="<%= confession._id %>" readonly hidden class="copy-link-input" />
+           <span class="leading-[1px] copyLinkBtn flex justify-center items-center gap-1">
+             <ion-icon name="arrow-redo-outline" class="text-2xl text-gray-400"></ion-icon>
+            <span class="text-sm font-sans font-normal text-gray-500 dark:text-gray-400">Share</span>
+           </span>
+          </div> 
+        <div class="report-btn-div ">
+            <span class="text-center flex items-center justify-center gap-1" id="reportBtn" data-id="<%= confession._id %>">
+              <ion-icon name="alert-circle-outline" class="text-2xl text-gray-400"></ion-icon>
+              <span class="text-sm font-sans font-normal text-gray-500 dark:text-gray-400">Report</span>
+            </span>
+          </div>
+      </div>
+    </div>
+  </section>
+  <%- include('layouts/scripts') %> 
+  <script src="/js/report.js"></script> 
+</body>
+</html>

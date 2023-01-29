@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+:root{
+    --backdrop-color: rgba(0, 0, 0, 0.1);
+}
+.fromContainer {
+    height: calc(100vh - 56px);
+}
+.registerForm input:focus,
+textarea:focus {
+    border: 2px solid rgba(52, 152, 219, 0.6);
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.4);
+    transition: 0.5s;
+}
+.confessionContainer{
+    min-height: calc(100vh - 48px);
+}
+
+.smile-face.active{
+    color: steelblue;
+    font-weight: 600;
+}
+.confessions{
+    min-height: 570px;
+    max-height: 570px;
+}
+.viewAllDiv{
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.otpDiv{
+    display: none;
+}
+.otpDiv.active{
+    display: flex;
+}
+.profileSection{
+background: linear-gradient(95deg, #0acffe 0%, #495aff 100%);
+}
+
+.copy_link_box{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.menuSection.active{
+    right: 0;
+    /* background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1px); */
+    transition: right 0.3s
+}
+.menuTags a.active li{
+    background: red;
+}
+/* .check-box{
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+} */
+
+.check-box input[type="checkbox"]{
+    color: cadetblue;
+    height: 15px !important;
+    width: 15px !important;
+    margin-top: 4px;
+}
+.check-box span{
+    padding-left: .5rem;
+
+}
+/* Style the container for the radio buttons */
+.avatar-select {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1rem;
+}
+.select-avatar{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.select-avatar input[type=radio]{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+}
+.select-avatar img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid transparent;
+}
+.select-avatar input[type=radio]:checked +  img{
+    border-color: rgba(142, 68, 173, 1.0)
+}
+
+/* ==================navbar===================== */
+.navigation ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+.navigation .list a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 1px;
+}
+.navigation .list .icon{
+    font-size: 1.3rem;
+}

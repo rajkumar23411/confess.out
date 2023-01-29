@@ -1,0 +1,30 @@
+<%- include("layouts/head") %> 
+<body>
+    <%- include('layouts/navbar') %> 
+    <%- include('layouts/menu') %> 
+    <section class="confessionContainer bg-slate-100 flex items-center justify-center flex-col dark:bg-gray-800">
+        <p class="font-semibold text-2xl mb-10 text-gray-700 dark:text-gray-400">Select your desired avatar</p>
+        <form action="/avatar" method="post" class="select-avatar-form">
+            <div class="avatar-select flex flex-wrap items-center justify-center">
+                <div class="select-avatar">
+                    <input type="radio" name="avatar" value="https://res.cloudinary.com/dkukx5byz/image/upload/v1674634820/confession_avatar/fe-2_ceer6l.jpg" class="avatar-inputs"/>
+                    <img src="https://res.cloudinary.com/dkukx5byz/image/upload/v1674634820/confession_avatar/fe-2_ceer6l.jpg" alt="fe-2" />
+                </div>
+                <div class="select-avatar">
+                    <input type="radio" name="avatar" value="https://res.cloudinary.com/dkukx5byz/image/upload/v1674634820/confession_avatar/me-2_dze5k0.jpg" class="avatar-inputs"/>
+                    <img src="https://res.cloudinary.com/dkukx5byz/image/upload/v1674634820/confession_avatar/me-2_dze5k0.jpg" alt="me-2" />
+                </div>
+                <div class="select-avatar">
+                    <input type="radio" name="avatar" value="https://res.cloudinary.com/dkukx5byz/image/upload/v1674634820/confession_avatar/fe-1_nacs2a.jpg" class="avatar-inputs"  />
+                    <img src="https://res.cloudinary.com/dkukx5byz/image/upload/v1674634820/confession_avatar/fe-1_nacs2a.jpg" alt="fe-1" />
+                </div>
+                <div class="select-avatar">
+                    <input type="radio" name="avatar" value="https://res.cloudinary.com/dkukx5byz/image/upload/v1674634820/confession_avatar/me-1_nmxg7q.jpg" class="avatar-inputs"/>
+                    <img src="https://res.cloudinary.com/dkukx5byz/image/upload/v1674634820/confession_avatar/me-1_nmxg7q.jpg" alt="me-1" />
+                </div>
+            </div>
+        </form>
+    </section>
+    <%- include("layouts/scripts") %> 
+</body>
+</html>

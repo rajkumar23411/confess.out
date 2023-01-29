@@ -1,0 +1,47 @@
+<%- include('layouts/head')  %> 
+<body class="bg-slate-100">
+    <%- include('layouts/navbar') %> 
+    <%- include("layouts/menu") %> 
+    <%- include('layouts/alert_success') %>
+    <% if (confessions.length === 0) { %>
+        <section class="confessionContainer flex items-center justify-center flex-col dark:bg-gray-800">
+            <img src="/images/dizzy_face.png" alt="dizzy face">
+            <h2 class="font-bold text-base text-gray-700 dark:text-gray-300">Oops! You have not confess anything yet!</h2>
+            <a href="/add/confession" class="mt-4 bg-blue-500 dark:bg-gray-700 text-white font-sans px-4 py-2 rounded-sm uppercase text-sm font-medium">Add Now</a>
+        </section>
+    <% } else { %>
+        <section class="p-2 flex justify-between items-center dark:bg-gray-800">
+            <div class="text-base font-medium font-sans text-gray-600 dark:text-gray-400">Your Confessions (<%= confessions.length %>) </div>
+            <a href="/add/confession" class="text-xs border-2 border-blue-600 rounded-lg px-2 py-1 dark:text-gray-300 uppercase font-medium
+            ">
+                Add
+            </a>
+        </section>
+        <section class="flex flex-col gap-4 justify-start items-center pb-16 dark:bg-gray-800 confessionContainer pt-2">
+            <% confessions.forEach(c => { %>
+                <div class="py-2 bg-white rounded-md w-[97%] shadow-md shadow-gray-300 dark:bg-gray-700 dark:shadow-gray-900">
+                <h2 class="text-xs flex justify-start items-center gap-1 px-2">
+                    <ion-icon name="time-outline" class="text-base text-gray-300"></ion-icon>
+                    <span class="text-gray-500 text-xs font-sans dark:text-gray-400"><%= moment(c.createdAt).startOf('hour').fromNow(); %></span>
+                </h2>
+                <h1 class="mt-4 font-medium text-xl dark:text-gray-300 px-2"><%= c.heading %></h1>
+                <p class="mt-2 text-base dark:text-gray-200 px-2"><%= c.message %></p>
+                <div class="flex items-center justify-between mt-4 border-t-[1px] border-gray-600 pt-2 px-2">
+                    <a href="/confession/edit/<%= c._id %>" class="flex items-center justify-center leading-3 cursor-pointer">
+                        <ion-icon name="create" class="text-2xl text-gray-400 dark:text-blue-300"></ion-icon>
+                        <span class="text-base font-medium font-sans text-gray-500 dark:text-gray-400">Edit</span>
+                    </a>
+                    <form action="/confess/delete/<%= c._id %>" method="post" id="deleteConfession">
+                        <div class="flex items-center justify-center leading-3 gap-1 cursor-pointer" onclick="document.getElementById('deleteConfession').submit()">
+                            <ion-icon name="trash-bin" class="text-2xl text-gray-400 dark:text-red-300"></ion-icon>
+                            <span class="text-base font-medium font-sans text-gray-500 dark:text-gray-400">Delete</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <% }) %>
+        </section>
+    <% } %> 
+    <%- include('layouts/scripts') %> 
+</body>
+</html>

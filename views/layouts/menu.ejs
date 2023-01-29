@@ -1,0 +1,74 @@
+<section
+  class="h-screen w-full fixed top-0 right-[-200%] bottom-0 flex justify-end bg-transparent menuSection z-20"
+>
+  <div
+    class="h-[95%] w-64 bg-white relative shadow-xl shadow-gray-400 flex justify-between flex-col dark:bg-gray-800 dark:shadow-gray-900"
+    id="linkContainer"
+  >
+    <ion-icon
+      name="close-outline"
+      class="absolute right-2 top-2 closeBtn dark:text-gray-300 text-xl"
+    ></ion-icon>
+    <ul class="flex flex-col mt-8 w-full gap-1 menuLinks">
+      <a href="/" class="active">
+        <li class="flex items-center gap-4 w-full px-4 py-2">
+          <ion-icon name="home" class="text-blue-400"></ion-icon>
+          <span
+            class="text-sm font-normal font-sans text-gray-600 dark:text-gray-200"
+            >Home</span
+          >
+        </li>
+      </a>
+      <a href="/profile">
+        <li class="flex items-center gap-4 w-full px-4 py-2">
+          <ion-icon name="person" class="text-blue-400"></ion-icon>
+          <span
+            class="text-sm font-normal font-sans text-gray-600 dark:text-gray-200"
+            >Profile</span
+          >
+        </li>
+      </a>
+      <a href="/confessions">
+        <li class="flex items-center gap-4 w-full px-4 py-2">
+          <ion-icon name="chatbox" class="text-blue-400"></ion-icon>
+          <span
+            class="text-sm font-normal font-sans text-gray-600 dark:text-gray-200"
+            >My Confessions</span
+          >
+        </li>
+      </a>
+      <% if (!user) { %>
+      <a href="/signin">
+        <li class="flex items-center gap-4 w-full px-4 py-2">
+          <ion-icon name="trail-sign" class="text-blue-400"></ion-icon>
+          <span
+            class="text-sm font-normal font-sans text-gray-600 dark:text-gray-200"
+            >Login/Register</span
+          >
+        </li>
+      </a>
+      <% }else{ %>
+      <form action="/logout" method="post" class="logOut">
+        <li
+          class="flex items-center gap-4 w-full px-4 py-2"
+          onclick="document.querySelector('.logOut').submit()"
+        >
+          <ion-icon name="trail-sign" class="text-blue-400"></ion-icon>
+          <span
+            class="text-sm font-normal font-sans text-gray-600 dark:text-gray-200"
+            >Log out</span
+          >
+        </li>
+      </form>
+      <% } %>
+    </ul>
+    <div class="pb-4 px-4 flex gap-2 items-center" id="theme">
+      <ion-icon
+        name="sunny-outline"
+        class="text-2xl text-yellow-500"
+        id="themeIcon"
+      ></ion-icon>
+      <span class="text-base text-gray-500 dark:text-gray-200">Light</span>
+    </div>
+  </div>
+</section>

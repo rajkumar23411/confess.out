@@ -1,0 +1,29 @@
+<%- include("layouts/head")  %> 
+  <body>
+    <section
+      class="h-screen w-full flex flex-col items-center justify-center bg-blue-50"
+    >
+      <h2
+        class="text-gray-800 font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+      >
+        Oops! Page not found.
+      </h2>
+      <img
+        src="/images/notfound.svg"
+        alt="not found"
+        class="h-72 sm:h-80 md:h-96 lg:h-1/2"
+      />
+      <p
+        class="text-sm font-semibold text-slate-800 mb-5 sm:text-base md:text-lg lg:text-xl"
+      >
+        We can't find the page page you're looking for.
+      </p>
+      <a
+        href="/"
+        class="border-2 border-purple-700 text-purple-700 bg-transparent text-xs py-2 px-3 rounded-md font-semibold font-sans hover:border-purple-800 hover:font-bold hover:text-purple-800 hover:transition 0.5s"
+        >GO BACK HOME</a
+      >
+    </section>
+    <%- include('layouts/scripts') %>
+  </body>
+</html>
