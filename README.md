@@ -88,6 +88,7 @@ Don't forget to give the project a star! Thanks again!
 Author Info - [@rajkumar.kalita](itzraj005@gmail.com)
 <br />
 Project github repo Link - [Confess.out](https://github.com/rajkumar23411/confess.out.git)
+<br />
 Live link - [Confess.out](https://confess-out.onrender.com/)
 
 
