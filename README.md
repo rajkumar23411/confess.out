@@ -13,7 +13,7 @@ This is a web application for confessing your thoughts anonymously 🫣, built u
 ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=MongoDB&logoColor=white) ![connect-mongo](https://img.shields.io/badge/connect--mongo-%23FFB6C1.svg?style=for-the-badge&logo=npm&logoColor=white) ![connect-mongodb-session](https://img.shields.io/badge/connect--mongodb--session-%23FFB6C1.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![moment](https://img.shields.io/badge/Moment.js-%23000000.svg?style=for-the-badge&logo=moment&logoColor=white) ![Axios](https://img.shields.io/badge/axios-%2343853D.svg?style=for-the-badge&logo=axios&logoColor=white) ![dotenv](https://img.shields.io/badge/dotenv-%231AB47B.svg?style=for-the-badge&logo=dotenv&logoColor=white)
 
-## Environment Variables
+## 🔧 Environment Variables
 
 To set up the required environment variables, follow these steps:
 
@@ -27,7 +27,7 @@ To set up the required environment variables, follow these steps:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/manikangkandas/techwondoe.git
+   git clone https://github.com/rajkumar23411/confess.out.git
    ```
 2. Install packages using NPM or YARN
 
@@ -65,10 +65,12 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes `git commit -m 'Add some AmazingFeature'`
 4. Push to the Branch `git push origin feature/AmazingFeature`
 
+## 🤝 Contact
 
-
-
-
+Author Info - [@rajkumar.kalita](itzraj005@gmail.com)
+<br />
+Project github repo Link - [Confess.out](https://github.com/rajkumar23411/confess.out.git)
+Live link - [Confess.out](https://confess-out.onrender.com/)
 
 
 
