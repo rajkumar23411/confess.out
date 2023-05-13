@@ -13,6 +13,24 @@ This is a web application for confessing your thoughts anonymously 🫣, built u
 ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=MongoDB&logoColor=white) ![connect-mongo](https://img.shields.io/badge/connect--mongo-%23FFB6C1.svg?style=for-the-badge&logo=npm&logoColor=white) ![connect-mongodb-session](https://img.shields.io/badge/connect--mongodb--session-%23FFB6C1.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![moment](https://img.shields.io/badge/Moment.js-%23000000.svg?style=for-the-badge&logo=moment&logoColor=white) ![Axios](https://img.shields.io/badge/axios-%2343853D.svg?style=for-the-badge&logo=axios&logoColor=white) ![dotenv](https://img.shields.io/badge/dotenv-%231AB47B.svg?style=for-the-badge&logo=dotenv&logoColor=white)
 
+## 🖼️ Screenshots
+
+| ☀️Light Theme | 🌙Dark Theme |
+| --------------- | ----------------- |
+| ![Login](https://github.com/rajkumar23411/confess.out/assets/90103892/67f06df0-b816-4cac-95f4-f13088e4d048) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/f2266670-cce1-4d24-9f4d-c60f4895046a) | 
+| ![Register](https://github.com/rajkumar23411/confess.out/assets/90103892/141bbfcc-b1bb-40e1-9c6d-4b68b53e92bd) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/4b8132b4-d9f2-439c-b5b1-2e7831d22806) |
+| ![Forgot-password](https://github.com/rajkumar23411/confess.out/assets/90103892/223af50f-88ac-4c87-8943-0bc1372b26f2) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/f050ce07-59f8-4c2a-9817-6798058aa403) |
+| ![Home](https://github.com/rajkumar23411/confess.out/assets/90103892/5bedb094-15ca-46ee-8d44-61239482af2d) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/8fe3d27f-c1e0-4668-9a42-5df80efd7dc8) |
+| ![Add Confession](https://github.com/rajkumar23411/confess.out/assets/90103892/8fff6863-4a21-4f52-a0c3-b5ab857697bd) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/8c1951d6-4fb0-4f9a-9b36-3b180079280d) |
+| ![Home&Menu](https://github.com/rajkumar23411/confess.out/assets/90103892/9b05370d-366b-4550-98d7-4c749cd4b353) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/fc8169d2-f9a1-4ca1-9098-c752601adf73)  |
+| ![My Account](https://github.com/rajkumar23411/confess.out/assets/90103892/3e7af0a3-501b-46e6-b20b-2188d62a2461) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/5922c7cc-7619-42bf-b955-fbd865901827) |
+| ![my confessions](https://github.com/rajkumar23411/confess.out/assets/90103892/5ce2a1c8-27ab-4a73-b8b4-8d67469d98a9) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/afdd550d-35ce-4ebf-8e95-9dfb8c93db8a) |
+| ![Report Confession](https://github.com/rajkumar23411/confess.out/assets/90103892/9eccaca5-e508-434e-b432-997a6a0117bb) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/5c29f0fe-dd1e-49cb-87f1-0c4b437a887c) |
+| ![changeemail](https://github.com/rajkumar23411/confess.out/assets/90103892/4e8bc455-d5df-4991-aa14-7a4c122e06e5) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/4799fa5f-c015-4e98-9653-35c2e49fb4b5) |
+| ![email_upate_error](https://github.com/rajkumar23411/confess.out/assets/90103892/e1746b14-86f4-4c07-b4d6-8a633b9355ee) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/19f407e9-97b4-4488-b6ab-9b6e896be4d6) |
+| ![avatars](https://github.com/rajkumar23411/confess.out/assets/90103892/badb4c7f-1839-483b-aaa7-3a68b829e248) | ![image](https://github.com/rajkumar23411/confess.out/assets/90103892/b05bfbc4-4654-4e70-b330-6a8bf5bd8173) |
+
+
 ## 🔧 Environment Variables
 
 To set up the required environment variables, follow these steps:
